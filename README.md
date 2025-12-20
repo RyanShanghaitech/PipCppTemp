@@ -14,26 +14,32 @@
 - `LICENSE`: License file, without this other researchers will be unable to reuse your code. MIT license is recommended for academic usage, which only asks others to retain your authorship.
 
 ## Useful Command
+### Debug
 To upload the package to TestPyPI
 ```bash
 rm -rf dist; python -m build
 python -m twine upload --repository testpypi dist/*.tar.gz
+rm -rf dist build *.egg-info
 ```
 
 To install the package from TestPyPI
 ```bash
-pip uninstall pipcpptemp
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pipcpptemp
+rm -rf dist build *.egg-info
+pip uninstall pipcpptemp -y
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pipcpptemp -y
 ```
 
+### Release
 To upload the package to PyPI
 ```bash
 rm -rf dist; python -m build
 python -m twine upload dist/*.tar.gz
+rm -rf dist build *.egg-info
 ```
 
 To install the package from PyPI
 ```bash
-pip uninstall pipcpptemp
-pip install pipcpptemp
+rm -rf dist build *.egg-info
+pip uninstall pipcpptemp -y
+pip install pipcpptemp -y
 ```
