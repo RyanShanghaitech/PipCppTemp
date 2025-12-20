@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PipCppTemp"
+version = "0.0.0"
+dependencies = ["numpy"]
+
+description = "Pip Package with C++ Backend Template."
+keywords = ["C-API", "template"]
+authors = [{name = "Ryan", email = "ryan_shanghaitech@proton.me"}]
+
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+
+[project.urls]
+Repository = "https://github.com/RyanShanghaitech/PipCppTemp"
+Examples = "https://github.com/RyanShanghaitech/PipCppTemp/tree/main/example"
