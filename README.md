@@ -9,6 +9,7 @@
 
 ### Optional
 - `example`: The scripts serve as examples for other users, or test scripts for you to see if the package will be working.
+- `dev`: The scripts for development use which you do not expect users to read.
 - `README.md`: The poster of this package. Please make sure it's elegant since it will be illustrated on project mainpage of Github or PyPI.
 - `requirements.txt`: A convenient list so that user can install the depencencies via `pip install -r requirements.txt`.
 - `LICENSE`: License file, without this other researchers will be unable to reuse your code. MIT license is recommended for academic usage, which only asks others to retain your authorship.
@@ -24,9 +25,8 @@ rm -rf dist build *.egg-info
 
 To install the package from TestPyPI
 ```bash
-rm -rf dist build *.egg-info
-pip uninstall pipcpptemp -y
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pipcpptemp -y
+rm -rf *.egg-info; pip uninstall {PACKAGE_NAME} -y
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ {PACKAGE_NAME} -y
 ```
 
 ### Release
@@ -39,7 +39,6 @@ rm -rf dist build *.egg-info
 
 To install the package from PyPI
 ```bash
-rm -rf dist build *.egg-info
-pip uninstall pipcpptemp -y
-pip install pipcpptemp -y
+rm -rf *.egg-info; pip uninstall {PACKAGE_NAME} -y
+pip install {PACKAGE_NAME} -y
 ```
