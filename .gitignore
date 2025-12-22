@@ -1,13 +1,13 @@
-*.npy
-*.npz
-*.so
+# *.npy
+# *.npz
+# *.so
 
-test*
-temp*
+# test*
+# temp*
 
-*.egg-info/
-build
-dist
-__pycache__
+# *.egg-info/
+# build
+# dist
+# __pycache__
 
 # .vscode

@@ -3,7 +3,7 @@ requires = ["setuptools", "numpy"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "PipCppTemp"
+name = "{PACKAGE_NAME}"
 version = "0.0.0"
 dependencies = ["numpy"]
 
@@ -16,5 +16,5 @@ license-files = ["LICENSE"]
 readme = "README.md"
 
 [project.urls]
-Repository = "https://github.com/RyanShanghaitech/PipCppTemp"
-Examples = "https://github.com/RyanShanghaitech/PipCppTemp/tree/main/example"
+Repository = "https://github.com/RyanShanghaitech/{PACKAGE_NAME}"
+Examples = "https://github.com/RyanShanghaitech/{PACKAGE_NAME}/tree/main/example"

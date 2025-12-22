@@ -1,17 +1,19 @@
 from setuptools import setup, Extension
 import numpy
 
+PACKAGE_NAME = "pipcpptemp"
+
 _sources = \
 [
-    './pipcpptemp_src/ext/main.cpp',
+    f'./{PACKAGE_NAME}_src/ext/main.cpp',
 ]
 
 modExt = Extension\
 (
-    "pipcpptemp.ext", 
+    f"{PACKAGE_NAME}.ext", 
     sources = _sources,
     # libraries = ['jemalloc'],
-    include_dirs = ["./pipcpptemp_src/ext/", numpy.get_include()],
+    include_dirs = [f"./{PACKAGE_NAME}_src/ext/", numpy.get_include()],
     language = 'c++',
     # extra_compile_args = ["-O3", "-fopenmp"],
     # extra_link_args = ["-fopenmp"],
@@ -19,19 +21,19 @@ modExt = Extension\
 
 _packages = \
 [
-    "pipcpptemp", 
-    "pipcpptemp.ext",
+    "{PACKAGE_NAME}", 
+    "{PACKAGE_NAME}.ext",
 ]
 
 _package_dir = \
 {
-    "pipcpptemp":"./pipcpptemp_src/", 
-    "pipcpptemp.ext":"./pipcpptemp_src/ext/",
+    f"{PACKAGE_NAME}":f"./{PACKAGE_NAME}_src/", 
+    f"{PACKAGE_NAME}.ext":f"./{PACKAGE_NAME}_src/ext/",
 }
 
 setup\
 (
-    name = 'pipcpptemp',
+    name = f'{PACKAGE_NAME}',
     ext_modules = [modExt],
     packages = _packages,
     package_dir = _package_dir,
