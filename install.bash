@@ -1,6 +1,6 @@
 # python -m build
 rm -r *.egg-info build dist
-pip uninstall pipcpptemp -y
+pip uninstall {PACKAGE_NAME} -y
 pip install .
 rm -r *.egg-info build dist
 
