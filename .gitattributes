@@ -1,3 +1,0 @@
-* linguist-vendored
-*_src/ -linguist-vendored # only calculate the package source
-# *_src/ext/ -linguist-vendored # only calculate the C++ extension
