@@ -21,8 +21,8 @@ modExt = Extension\
 
 _packages = \
 [
-    "{PACKAGE_NAME}", 
-    "{PACKAGE_NAME}.ext",
+    f"{PACKAGE_NAME}", 
+    f"{PACKAGE_NAME}.ext",
 ]
 
 _package_dir = \

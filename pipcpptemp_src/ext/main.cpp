@@ -5,7 +5,7 @@
 
 PyObject* CppFunc(PyObject* self, PyObject* const* args, Py_ssize_t narg)
 {
-    puts(">> Entering C++ Layer.");
+    puts(">> Entering C++ Layer");
 
     // read input numpy array and scalar
     PyArrayObject* pyobjArr = (PyArrayObject*)PyArray_FROM_OTF(args[0], NPY_FLOAT64, NPY_ARRAY_C_CONTIGUOUS);
@@ -18,6 +18,7 @@ PyObject* CppFunc(PyObject* self, PyObject* const* args, Py_ssize_t narg)
         *(pf64Ptr0 + i) = f64Filler;
     }
 
+    puts("Existing C++ Layer >>");
     return (PyObject*)pyobjArr;
 }
 

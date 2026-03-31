@@ -25,8 +25,8 @@ rm -rf dist build *.egg-info
 
 To install the package from TestPyPI
 ```bash
-rm -rf *.egg-info; pip uninstall {PACKAGE_NAME} -y
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ {PACKAGE_NAME} -y
+rm -rf *.egg-info; pip uninstall PipCppTemp -y
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ PipCppTemp -y
 ```
 
 ### Release
@@ -39,6 +39,6 @@ rm -rf dist build *.egg-info
 
 To install the package from PyPI
 ```bash
-rm -rf *.egg-info; pip uninstall {PACKAGE_NAME} -y
-pip install {PACKAGE_NAME} -y
+rm -rf *.egg-info; pip uninstall PipCppTemp -y
+pip install PipCppTemp -y
 ```

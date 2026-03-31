@@ -1,0 +1,4 @@
+0.0.1
+Replace place holder `{PACKAGE_NAME}` in multiple files with true package name to make this template installable.
+Update MANIFEST.in and LICENSE.
+Move requirements from root folder to examples, it should be a file to indicate what additional dependencies are needed to run the examples. Hard dependency should be specified in the toml file.
